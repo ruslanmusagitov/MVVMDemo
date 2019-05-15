@@ -16,6 +16,8 @@
 		81DFF018228BCB690084DEE9 /* PersonDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81DFF016228BCB690084DEE9 /* PersonDetailsViewController.xib */; };
 		81DFF01A228BCE2A0084DEE9 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DFF019228BCE2A0084DEE9 /* UIColor+Extension.swift */; };
 		81DFF01C228BD8120084DEE9 /* PersonDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DFF01B228BD8120084DEE9 /* PersonDetailsViewModel.swift */; };
+		81DFF022228BDF6D0084DEE9 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DFF021228BDF6D0084DEE9 /* NetworkService.swift */; };
+		81DFF024228BE5160084DEE9 /* PersonDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DFF023228BE5160084DEE9 /* PersonDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,8 @@
 		81DFF016228BCB690084DEE9 /* PersonDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonDetailsViewController.xib; sourceTree = "<group>"; };
 		81DFF019228BCE2A0084DEE9 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		81DFF01B228BD8120084DEE9 /* PersonDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailsViewModel.swift; sourceTree = "<group>"; };
+		81DFF021228BDF6D0084DEE9 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		81DFF023228BE5160084DEE9 /* PersonDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +92,9 @@
 				81DFF015228BCB690084DEE9 /* PersonDetailsViewController.swift */,
 				81DFF016228BCB690084DEE9 /* PersonDetailsViewController.xib */,
 				81DFF019228BCE2A0084DEE9 /* UIColor+Extension.swift */,
+				81DFF023228BE5160084DEE9 /* PersonDetails.swift */,
 				81DFF01B228BD8120084DEE9 /* PersonDetailsViewModel.swift */,
+				81DFF021228BDF6D0084DEE9 /* NetworkService.swift */,
 				81DFEFFC228BCB1B0084DEE9 /* Assets.xcassets */,
 				81DFEFFE228BCB1B0084DEE9 /* LaunchScreen.storyboard */,
 				81DFF001228BCB1B0084DEE9 /* Info.plist */,
@@ -207,9 +213,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				81DFEFF8228BCB1B0084DEE9 /* ViewController.swift in Sources */,
+				81DFF024228BE5160084DEE9 /* PersonDetails.swift in Sources */,
 				81DFEFF6228BCB1B0084DEE9 /* AppDelegate.swift in Sources */,
 				81DFF017228BCB690084DEE9 /* PersonDetailsViewController.swift in Sources */,
 				81DFF01C228BD8120084DEE9 /* PersonDetailsViewModel.swift in Sources */,
+				81DFF022228BDF6D0084DEE9 /* NetworkService.swift in Sources */,
 				81DFF01A228BCE2A0084DEE9 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -18,7 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow()
         let navVC = UINavigationController()
         let vc = PersonDetailsViewController(nibName: String(describing: PersonDetailsViewController.self), bundle: nil)
-        vc.setViewModel(viewModel: PersonDetailsViewModel(firstName: "Ruslan", lastName: nil, email: nil, password: nil, confirmPassword: nil, agreed: false))
+        let personDetails = PersonDetails(firstName: "Ruslan", lastName: "Musagitov", email: "ruslan.musagitov@gmail.com", password: "qwertyu1", confirmPassword: "qwertyu1", agreed: true)
+        vc.setViewModel(viewModel: PersonDetailsViewModel(with: personDetails))
+        
         navVC.viewControllers = [UIViewController(), vc]
         window?.rootViewController = navVC
         window?.makeKeyAndVisible()

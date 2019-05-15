@@ -36,6 +36,7 @@ class PersonDetailsViewController: UIViewController {
     
     func setViewModel(viewModel: PersonDetailsViewModel) {
         self.viewModel = viewModel
+        self.viewModel.delegate = self
         updateView()
     }
     
@@ -83,7 +84,6 @@ class PersonDetailsViewController: UIViewController {
         viewModel.agreed = agreedButton.isSelected
         
         updateView()
-        print(viewModel.isValid)
     }
     
     @IBAction func controlValueChanged(_ sender: Any) {
@@ -94,6 +94,21 @@ class PersonDetailsViewController: UIViewController {
     }
     
     @IBAction func nextSelected() {
-        
+        viewModel.next()
+    }
+}
+
+extension PersonDetailsViewController: PersonDetailsViewModelDelegate {
+
+    func personViewModelUserCreated(viewModel: PersonDetailsViewModel, with data: PersonData) {
+        let alert = UIAlertController(title: "Success", message: "User created successfully with token \(data.token)", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
+    
+    func personViewModelUserCreateFailed(viewModel: PersonDetailsViewModel, with message: String) {
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
 }
