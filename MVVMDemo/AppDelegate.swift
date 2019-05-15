@@ -16,7 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow()
-        window?.rootViewController = PersonDetailsViewController(nibName: String(describing: PersonDetailsViewController.self), bundle: nil)
+        let navVC = UINavigationController()
+        let vc = PersonDetailsViewController(nibName: String(describing: PersonDetailsViewController.self), bundle: nil)
+        navVC.viewControllers = [UIViewController(), vc]
+        window?.rootViewController = navVC
         window?.makeKeyAndVisible()
         return true
     }
