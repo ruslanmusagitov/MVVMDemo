@@ -49,7 +49,7 @@ class NetworkService {
     }
     
     class func testRegistration(with personDetails: PersonDetails, completion:@escaping (TestRegistrationResponse?, Error?) -> Void) {
-        guard let params = personDetails.dictionary as? [String: AnyObject], let url = NetworkService.buildUrl(with: Endpoints.testRegistration, params: params) else {
+        guard let params = personDetails.dictionary, let url = NetworkService.buildUrl(with: Endpoints.testRegistration, params: params) else {
             return completion(nil, nil)
         }
         
@@ -79,8 +79,8 @@ class NetworkService {
 }
 
 extension Encodable {
-    var dictionary: [String: Any]? {
+    var dictionary: [String: AnyObject]? {
         guard let data = try? JSONEncoder().encode(self) else { return nil }
-        return (try? JSONSerialization.jsonObject(with: data, options: .allowFragments)).flatMap { $0 as? [String: Any] }
+        return (try? JSONSerialization.jsonObject(with: data, options: .allowFragments)).flatMap { $0 as? [String: AnyObject] }
     }
 }
