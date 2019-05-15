@@ -9,7 +9,14 @@
 import UIKit
 
 class PersonDetailsViewController: UIViewController {
-
+    @IBOutlet weak var firstNameTextField: UITextField!
+    @IBOutlet weak var lastNameTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var confirmPasswordTextField: UITextField!
+    @IBOutlet weak var agreedButton: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -39,5 +46,9 @@ class PersonDetailsViewController: UIViewController {
         
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+    }
+    
+    @IBAction func nextSelected() {
+        
     }
 }
