@@ -16,11 +16,9 @@ class PersonDetailsViewController: UIViewController {
         let gradientLayer:CAGradientLayer = CAGradientLayer()
         gradientLayer.frame.size = view.frame.size
         gradientLayer.colors =
-            [UIColor(red: 91.0/255.0, green: 150/255.0, blue: 202.0/255, alpha: 1).cgColor, UIColor(red: 31.0/255.0, green: 109/255.0, blue: 182.0/255, alpha: 1).cgColor]
+            [UIColor.App.gradientBlueBottom.cgColor, UIColor.App.gradientBlueTop.cgColor]
         //Use diffrent colors
         view.layer.addSublayer(gradientLayer)
     
     }
 }
-
-
