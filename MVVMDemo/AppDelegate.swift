@@ -16,12 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow()
+        
         let navVC = UINavigationController()
         let vc = PersonDetailsViewController(nibName: String(describing: PersonDetailsViewController.self), bundle: nil)
         let personDetails = PersonDetails(firstName: "Ruslan", lastName: "Musagitov", email: "ruslan.musagitov@gmail.com", password: "qwertyu1", confirmPassword: "qwertyu1", agreed: true)
         vc.setViewModel(viewModel: PersonDetailsViewModel(with: personDetails))
         
-        navVC.viewControllers = [UIViewController(), vc]
+        navVC.viewControllers = [FirstViewController(nibName: String(describing: FirstViewController.self), bundle: nil), vc]
         window?.rootViewController = navVC
         window?.makeKeyAndVisible()
         return true
